@@ -660,7 +660,7 @@ class Orient:
 # Command operations on a CNC
 # =============================================================================
 class CNC:
-    inch = True
+    inch = False
     lasercutter = False
     laseradaptive = False
     acceleration_x = 25.0  # mm/s^2
@@ -678,7 +678,7 @@ class CNC:
     stdexpr = False  # standard way of defining expressions with []
     comment = ""  # last parsed comment
     developer = True
-    drozeropad = 3
+    drozeropad = 1
     vars = {
         "prbx": 0.0,
         "prby": 0.0,
@@ -951,37 +951,37 @@ class CNC:
     # ----------------------------------------------------------------------
     def initPath(self, x=None, y=None, z=None, a=None, b=None, c=None):
         if x is None:
-            self.x = self.xval = CNC.vars["wx"] or 0
+            self.x = self.xval = CNC.vars["wx"] or 0.000
         else:
             self.x = self.xval = x
         if y is None:
-            self.y = self.yval = CNC.vars["wy"] or 0
+            self.y = self.yval = CNC.vars["wy"] or 0.000
         else:
             self.y = self.yval = y
         if z is None:
-            self.z = self.zval = CNC.vars["wz"] or 0
+            self.z = self.zval = CNC.vars["wz"] or 0.000
         else:
             self.z = self.zval = z
         if a is None:
-            self.a = self.aval = CNC.vars["wa"] or 0
+            self.a = self.aval = CNC.vars["wa"] or 0.000
         else:
             self.a = self.aval = a
         if b is None:
-            self.b = self.bval = CNC.vars["wb"] or 0
+            self.b = self.bval = CNC.vars["wb"] or 0.000
         else:
             self.b = self.bval = b
         if c is None:
-            self.c = self.cval = CNC.vars["wc"] or 0
+            self.c = self.cval = CNC.vars["wc"] or 0.000
         else:
             self.c = self.cval = c
 
-        self.ival = self.jval = self.kval = 0.0
-        self.uval = self.vval = self.wval = 0.0
-        self.dx = self.dy = self.dz = 0.0
-        self.di = self.dj = self.dk = 0.0
-        self.rval = 0.0
-        self.pval = 0.0
-        self.qval = 0.0
+        self.ival = self.jval = self.kval = 0.000
+        self.uval = self.vval = self.wval = 0.000
+        self.dx = self.dy = self.dz = 0.000
+        self.di = self.dj = self.dk = 0.000
+        self.rval = 0.000
+        self.pval = 0.000
+        self.qval = 0.000
         self.unit = 1.0
         self.mval = 0
         self.lval = 1
