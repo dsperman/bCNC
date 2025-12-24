@@ -58,7 +58,7 @@ except Exception:
 
 __author__ = "Vasilis Vlachoudis"
 __email__ = "vvlachoudis@gmail.com"
-__version__ = "0.9.16dsp"
+__version__ = "0.9.16dsp2"
 __date__ = "24 June 2022"
 __prg__ = "bCNC"
 

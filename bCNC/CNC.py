@@ -660,7 +660,7 @@ class Orient:
 # Command operations on a CNC
 # =============================================================================
 class CNC:
-    inch = False
+    inch = True
     lasercutter = False
     laseradaptive = False
     acceleration_x = 25.0  # mm/s^2

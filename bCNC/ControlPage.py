@@ -268,7 +268,7 @@ class DROFrame(CNCRibbon.PageFrame):
             borderwidth=0,
             justify=RIGHT,
         )
-        self.xwork.grid(row=row, column=col, padx=3, sticky=EW)
+        self.xwork.grid(row=row, column=col, padx=1, sticky=EW)
         tkExtra.Balloon.set(self.xwork, _("X work position (click to set)"))
         self.xwork.bind("<FocusIn>", self.workFocus)
         self.xwork.bind("<Return>", self.setX)
@@ -284,7 +284,7 @@ class DROFrame(CNCRibbon.PageFrame):
             borderwidth=0,
             justify=RIGHT,
         )
-        self.ywork.grid(row=row, column=col, padx=3, sticky=EW)
+        self.ywork.grid(row=row, column=col, padx=1, sticky=EW)
         tkExtra.Balloon.set(self.ywork, _("Y work position (click to set)"))
         self.ywork.bind("<FocusIn>", self.workFocus)
         self.ywork.bind("<Return>", self.setY)
@@ -300,7 +300,7 @@ class DROFrame(CNCRibbon.PageFrame):
             borderwidth=0,
             justify=RIGHT,
         )
-        self.zwork.grid(row=row, column=col, padx=3, sticky=EW)
+        self.zwork.grid(row=row, column=col, padx=1, sticky=EW)
         tkExtra.Balloon.set(self.zwork, _("Z work position (click to set)"))
         self.zwork.bind("<FocusIn>", self.workFocus)
         self.zwork.bind("<Return>", self.setZ)
@@ -318,7 +318,7 @@ class DROFrame(CNCRibbon.PageFrame):
             background=tkExtra.GLOBAL_CONTROL_BACKGROUND,
             anchor=E,
         )
-        self.xmachine.grid(row=row, column=col, padx=3, sticky=EW)
+        self.xmachine.grid(row=row, column=col, padx=1, sticky=EW)
 
         col += 1
         self.ymachine = Label(
@@ -327,7 +327,7 @@ class DROFrame(CNCRibbon.PageFrame):
             background=tkExtra.GLOBAL_CONTROL_BACKGROUND,
             anchor=E,
         )
-        self.ymachine.grid(row=row, column=col, padx=3, sticky=EW)
+        self.ymachine.grid(row=row, column=col, padx=1, sticky=EW)
 
         col += 1
         self.zmachine = Label(
@@ -336,7 +336,7 @@ class DROFrame(CNCRibbon.PageFrame):
             background=tkExtra.GLOBAL_CONTROL_BACKGROUND,
             anchor=E,
         )
-        self.zmachine.grid(row=row, column=col, padx=3, sticky=EW)
+        self.zmachine.grid(row=row, column=col, padx=1, sticky=EW)
 
         # Set buttons
         row += 1
@@ -689,7 +689,7 @@ class abcDROFrame(CNCRibbon.PageExLabelFrame):
             background=tkExtra.GLOBAL_CONTROL_BACKGROUND,
             anchor=E,
         )
-        self.amachine.grid(row=row, column=col, padx=3, sticky=EW)
+        self.amachine.grid(row=row, column=col, padx=1, sticky=EW)
         col += 1
         self.bmachine = Label(
             frame,
@@ -697,7 +697,7 @@ class abcDROFrame(CNCRibbon.PageExLabelFrame):
             background=tkExtra.GLOBAL_CONTROL_BACKGROUND,
             anchor=E,
         )
-        self.bmachine.grid(row=row, column=col, padx=3, sticky=EW)
+        self.bmachine.grid(row=row, column=col, padx=1, sticky=EW)
 
         col += 1
         self.cmachine = Label(
@@ -706,7 +706,7 @@ class abcDROFrame(CNCRibbon.PageExLabelFrame):
             background=tkExtra.GLOBAL_CONTROL_BACKGROUND,
             anchor=E,
         )
-        self.cmachine.grid(row=row, column=col, padx=3, sticky=EW)
+        self.cmachine.grid(row=row, column=col, padx=1, sticky=EW)
 
         # Set buttons
         row += 1
@@ -980,7 +980,7 @@ class ControlFrame(CNCRibbon.PageExLabelFrame):
         col += 2
         b = Button(
             frame, text="\u00D710", command=self.mulStep,
-            width=3, padx=3, pady=1
+            width=3, padx=1, pady=1
         )
         b.grid(row=row, column=col, sticky=EW + S)
         tkExtra.Balloon.set(b, _("Multiply step by 10"))
@@ -988,7 +988,7 @@ class ControlFrame(CNCRibbon.PageExLabelFrame):
 
         col += 1
         b = Button(frame, text=_("+"), command=self.incStep,
-                   width=3, padx=3, pady=1)
+                   width=3, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=EW + S)
         tkExtra.Balloon.set(b, _("Increase step by 1 unit"))
         self.addWidget(b)
@@ -1150,13 +1150,13 @@ class ControlFrame(CNCRibbon.PageExLabelFrame):
 
         col += 2
         b = Button(
-            frame, text="\u00F710", command=self.divStep, padx=3, pady=1)
+            frame, text="\u00F710", command=self.divStep, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=EW + N)
         tkExtra.Balloon.set(b, _("Divide step by 10"))
         self.addWidget(b)
 
         col += 1
-        b = Button(frame, text=_("-"), command=self.decStep, padx=3, pady=1)
+        b = Button(frame, text=_("-"), command=self.decStep, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=EW + N)
         tkExtra.Balloon.set(b, _("Decrease step by 1 unit"))
         self.addWidget(b)
@@ -1452,7 +1452,7 @@ class abcControlFrame(CNCRibbon.PageExLabelFrame):
         col += 2
         b = Button(
             frame, text="\u00D710", command=self.mulStep,
-            width=3, padx=3, pady=1
+            width=3, padx=1, pady=1
         )
         b.grid(row=row, column=col, sticky=EW + S)
         tkExtra.Balloon.set(b, _("Multiply step by 10"))
@@ -1460,7 +1460,7 @@ class abcControlFrame(CNCRibbon.PageExLabelFrame):
 
         col += 1
         b = Button(
-            frame, text=_("+"), command=self.incStep, width=3, padx=3, pady=1)
+            frame, text=_("+"), command=self.incStep, width=3, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=EW + S)
         tkExtra.Balloon.set(b, _("Increase step by 1 unit"))
         self.addWidget(b)
@@ -1618,13 +1618,13 @@ class abcControlFrame(CNCRibbon.PageExLabelFrame):
 
         col += 2
         b = Button(
-            frame, text="\u00F710", command=self.divStep, padx=3, pady=1)
+            frame, text="\u00F710", command=self.divStep, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=EW + N)
         tkExtra.Balloon.set(b, _("Divide step by 10"))
         self.addWidget(b)
 
         col += 1
-        b = Button(frame, text=_("-"), command=self.decStep, padx=3, pady=1)
+        b = Button(frame, text=_("-"), command=self.decStep, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=EW + N)
         tkExtra.Balloon.set(b, _("Decrease step by 1 unit"))
         self.addWidget(b)
@@ -1868,7 +1868,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
                 text=w,
                 foreground="DarkRed",
                 font="Helvetica,14",
-                padx=3,
+                padx=1,
                 pady=1,
                 variable=wcsvar,
                 value=p,
@@ -1934,7 +1934,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
         self.addWidget(self.toolEntry)
 
         col += 1
-        b = Button(f, text=_("set"), command=self.setTool, padx=3, pady=1)
+        b = Button(f, text=_("set"), command=self.setTool, padx=1, pady=1)
         b.grid(row=row, column=col, sticky=W)
         self.addWidget(b)
 
@@ -1976,7 +1976,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
         self.addWidget(self.feedRate)
 
         col += 1
-        b = Button(f, text=_("set"), command=self.setFeedRate, padx=3, pady=1)
+        b = Button(f, text=_("set"), command=self.setFeedRate, padx=1, pady=1)
         b.grid(row=row, column=col, columnspan=2, sticky=W)
         self.addWidget(b)
 
@@ -2018,7 +2018,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
         self.addWidget(self.tlo)
 
         col += 1
-        b = Button(f, text=_("set"), command=self.setTLO, padx=3, pady=1)
+        b = Button(f, text=_("set"), command=self.setTLO, padx=1, pady=1)
         b.grid(row=row, column=col, columnspan=2, sticky=W)
         self.addWidget(b)
 
@@ -2091,7 +2091,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
             compound=LEFT,
             indicatoron=False,
             variable=self.spindle,
-            padx=3,
+            padx=1,
             pady=0,
         )
         tkExtra.Balloon.set(b, _("Start/Stop spindle (M3/M5)"))
@@ -2131,7 +2131,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
             command=self.coolantOff,
             indicatoron=False,
             variable=self.coolant,
-            padx=3,
+            padx=1,
             pady=0,
         )
         tkExtra.Balloon.set(coolantDisable, _("Stop cooling (M9)"))
@@ -2145,7 +2145,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
             command=self.coolantFlood,
             indicatoron=False,
             variable=self.flood,
-            padx=3,
+            padx=1,
             pady=0,
         )
         tkExtra.Balloon.set(floodEnable, _("Start flood (M8)"))
@@ -2159,7 +2159,7 @@ class StateFrame(CNCRibbon.PageExLabelFrame):
             command=self.coolantMist,
             indicatoron=False,
             variable=self.mist,
-            padx=3,
+            padx=1,
             pady=0,
         )
         tkExtra.Balloon.set(mistEnable, _("Start mist (M7)"))
