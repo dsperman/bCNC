@@ -678,7 +678,7 @@ class CNC:
     stdexpr = False  # standard way of defining expressions with []
     comment = ""  # last parsed comment
     developer = True
-    drozeropad = 0
+    drozeropad = 3
     vars = {
         "prbx": 0.0,
         "prby": 0.0,

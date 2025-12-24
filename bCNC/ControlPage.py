@@ -299,6 +299,7 @@ class DROFrame(CNCRibbon.PageFrame):
             relief=FLAT,
             borderwidth=0,
             justify=RIGHT,
+            
         )
         self.zwork.grid(row=row, column=col, padx=1, sticky=EW)
         tkExtra.Balloon.set(self.zwork, _("Z work position (click to set)"))
