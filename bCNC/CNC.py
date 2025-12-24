@@ -903,7 +903,8 @@ class CNC:
         except Exception:
             pass
         try:
-            CNC.drozeropad = int(config.get(section, "drozeropad"))
+#            CNC.drozeropad = int(config.get(section, "drozeropad"))
+            CNC.drozeropad = int(3)
         except Exception:
             pass
 
