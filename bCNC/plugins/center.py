@@ -50,9 +50,9 @@ class Tool(Plugin):
             x, y = path.center()
             eblock = Block("center of " + app.gcode[bid].name())
             eblock.append("G0 x"
-                          + str(round(x, CNC.digits))
+                          + str(round(x, 3))
                           + " y"
-                          + str(round(y, CNC.digits))
+                          + str(round(y, 3))
                           )
             eblock.append("G1 Z0 F200")
             eblock.append("G0 Z10")

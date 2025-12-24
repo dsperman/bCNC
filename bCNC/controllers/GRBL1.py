@@ -114,28 +114,28 @@ class Controller(_GenericGRBL):
                     CNC.vars["my"] = float(word[2])
                     CNC.vars["mz"] = float(word[3])
                     CNC.vars["wx"] = round(
-                        CNC.vars["mx"] - CNC.vars["wcox"], CNC.digits
+                        CNC.vars["mx"] - CNC.vars["wcox"], 3
                     )
                     CNC.vars["wy"] = round(
-                        CNC.vars["my"] - CNC.vars["wcoy"], CNC.digits
+                        CNC.vars["my"] - CNC.vars["wcoy"], 3
                     )
                     CNC.vars["wz"] = round(
-                        CNC.vars["mz"] - CNC.vars["wcoz"], CNC.digits
+                        CNC.vars["mz"] - CNC.vars["wcoz"], 3
                     )
                     if len(word) > 4:
                         CNC.vars["ma"] = float(word[4])
                         CNC.vars["wa"] = round(
-                            CNC.vars["ma"] - CNC.vars["wcoa"], CNC.digits
+                            CNC.vars["ma"] - CNC.vars["wcoa"], 3
                         )
                     if len(word) > 5:
                         CNC.vars["mb"] = float(word[5])
                         CNC.vars["wb"] = round(
-                            CNC.vars["mb"] - CNC.vars["wcob"], CNC.digits
+                            CNC.vars["mb"] - CNC.vars["wcob"], 3
                         )
                     if len(word) > 6:
                         CNC.vars["mc"] = float(word[6])
                         CNC.vars["wc"] = round(
-                            CNC.vars["mc"] - CNC.vars["wcoc"], CNC.digits
+                            CNC.vars["mc"] - CNC.vars["wcoc"], 3
                         )
                     self.master._posUpdate = True
                 except (ValueError, IndexError):

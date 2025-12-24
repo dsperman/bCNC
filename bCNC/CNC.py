@@ -1046,7 +1046,7 @@ class CNC:
     def gcode(g, pairs):
         s = f"g{int(g)}"
         for c, v in pairs:
-            s += f" {c[0]}{round(v, CNC.digits):g}"
+            s += f" {c[0]}{round(v, 3):g}"
         return s
 
     # ----------------------------------------------------------------------
@@ -2355,7 +2355,7 @@ class GCode:
                 if isinstance(expr, types.CodeType):
                     result = eval(expr, CNC.vars, self.vars)
                     if isinstance(result, float):
-                        line[i] = str(round(result, CNC.digits))
+                        line[i] = str(round(result, 3))
                     else:
                         line[i] = str(result)
             return "".join(line)
@@ -5002,7 +5002,7 @@ class GCode:
     # ----------------------------------------------------------------------
     def roundFunc(self, new, old, relative):
         for name, value in new.items():
-            new[name] = round(value, CNC.digits)
+            new[name] = round(value, 3)
         return bool(new)
 
     # ----------------------------------------------------------------------
