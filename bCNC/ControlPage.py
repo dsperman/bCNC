@@ -268,7 +268,7 @@ class DROFrame(CNCRibbon.PageFrame):
             borderwidth=0,
             justify=RIGHT,
         )
-        self.xwork.grid(row=row, column=col, padx=3, sticky=EW)
+        self.xwork.grid(row=row, column=col, padx=1, sticky=EW)
         tkExtra.Balloon.set(self.xwork, _("X work position (click to set)"))
         self.xwork.bind("<FocusIn>", self.workFocus)
         self.xwork.bind("<Return>", self.setX)
@@ -284,7 +284,7 @@ class DROFrame(CNCRibbon.PageFrame):
             borderwidth=0,
             justify=RIGHT,
         )
-        self.ywork.grid(row=row, column=col, padx=3, sticky=EW)
+        self.ywork.grid(row=row, column=col, padx=1, sticky=EW,)
         tkExtra.Balloon.set(self.ywork, _("Y work position (click to set)"))
         self.ywork.bind("<FocusIn>", self.workFocus)
         self.ywork.bind("<Return>", self.setY)
@@ -300,8 +300,7 @@ class DROFrame(CNCRibbon.PageFrame):
             borderwidth=0,
             justify=RIGHT,
             
-        )
-        self.zwork.grid(row=row, column=col, padx=3, sticky=EW)
+        )13, sticky=EW)
         tkExtra.Balloon.set(self.zwork, _("Z work position (click to set)"))
         self.zwork.bind("<FocusIn>", self.workFocus)
         self.zwork.bind("<Return>", self.setZ)
